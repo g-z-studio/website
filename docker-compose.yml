@@ -1,0 +1,47 @@
+# Sharp dependency issue
+# https://github.com/gatsbyjs/gatsby/issues/11084
+
+version: '3'
+
+services:
+  gatsby:
+    working_dir: ./gatsby
+    build: .
+    depends_on:
+      - strapi
+      - db
+    ports:
+      - 3000:3000
+    restart: always
+
+  strapi:
+    working_dir: ./strapi
+    build: .
+    environment:
+      - APP_NAME=strapi-app
+      - DATABASE_CLIENT=mongo
+      - DATABASE_HOST=db
+      - DATABASE_PORT=27017
+      - DATABASE_NAME=strapi
+      - DATABASE_USERNAME=
+      - DATABASE_PASSWORD=
+      - DATABASE_SSL=false
+      - DATABASE_AUTHENTICATION_DATABASE=strapi
+      - HOST=localhost
+    ports:
+      - 1337:1337
+    volumes:
+      - ./strapi:/usr/src/api/strapi
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=strapi
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+    restart: always

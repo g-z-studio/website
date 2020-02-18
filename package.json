@@ -1,0 +1,19 @@
+{
+  "name": "gz-studio",
+  "version": "1.0.0",
+  "description": "gzstudio website",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-z-studio/website.git"
+  },
+  "author": "gzstudio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g-z-studio/website/issues"
+  },
+  "homepage": "https://github.com/g-z-studio/website#readme"
+}
