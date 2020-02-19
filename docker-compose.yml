@@ -1,24 +1,29 @@
 # Sharp dependency issue
 # https://github.com/gatsbyjs/gatsby/issues/11084
 
-version: '3'
+version: "3"
 
 services:
   gatsby:
-    working_dir: ./gatsby
-    build: .
-    depends_on:
-      - strapi
-      - db
+    build:
+      context: ./packages/gatsby
+      dockerfile: Dockerfile
+    command: yarn workspace @gz-studio/gatsby develop
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
     ports:
       - 3000:3000
+    depends_on:
+      - strapi
     restart: always
 
   strapi:
-    working_dir: ./strapi
-    build: .
+    build:
+      context: ./packages/strapi
+      dockerfile: Dockerfile
     environment:
-      - APP_NAME=strapi-app
+      - APP_NAME=gzstudio_website
       - DATABASE_CLIENT=mongo
       - DATABASE_HOST=db
       - DATABASE_PORT=27017
@@ -32,6 +37,7 @@ services:
       - 1337:1337
     volumes:
       - ./strapi:/usr/src/api/strapi
+    #      - /usr/src/api/strapi-project/node_modules
     depends_on:
       - db
     restart: always

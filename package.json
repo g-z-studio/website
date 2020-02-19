@@ -4,7 +4,7 @@
   "description": "gzstudio website",
   "main": "index.js",
   "scripts": {
-    "start": "docker-compose up"
+    "start": "yarn workspace @gz-studio/gatsby develop"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/g-z-studio/website/issues"
   },
-  "homepage": "https://github.com/g-z-studio/website#readme"
+  "homepage": "https://github.com/g-z-studio/website#readme",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
 }
