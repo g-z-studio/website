@@ -1,0 +1,14 @@
+version: '3'
+services:
+  gatsby:
+    command: ["npm", "run", "start"]
+    volumes:
+      - ./gatsby:/usr/src/app
+    stdin_open: true
+    tty: true
+  # strapi:
+  #   stdin_open: true
+  #   tty: true
+  # db:
+  #   stdin_open: true
+  #   tty: true

@@ -4,19 +4,26 @@
 version: '3'
 
 services:
-  gatsby:
-    working_dir: ./gatsby
-    build: .
-    depends_on:
-      - strapi
-      - db
-    ports:
-      - 3000:3000
-    restart: always
+  # gatsby:
+  #   working_dir: /home/gatsby-app
+  #   build:
+  #     context: ./gatsby
+  #     dockerfile: Dockerfile
+  #   # depends_on:
+  #   #   - strapi
+  #   #   - db
+  #   ports:
+  #     - "8000:8000"
+  #   environment:
+  #     GATSBY_WEBPACK_PUBLICPATH: /
+  #     # STRAPI_URL: strapi:1337
+  #   # command: ["gatsby", "develop"]
 
   strapi:
-    working_dir: ./strapi
-    build: .
+    working_dir: /home/app
+    build:
+      context: ./strapi
+      dockerfile: Dockerfile
     environment:
       - APP_NAME=strapi-app
       - DATABASE_CLIENT=mongo
@@ -31,7 +38,7 @@ services:
     ports:
       - 1337:1337
     volumes:
-      - ./strapi:/usr/src/api/strapi
+      - ./strapi:/home/app
     depends_on:
       - db
     restart: always
