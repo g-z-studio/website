@@ -3,26 +3,35 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import Hamburger from "./Hamburger";
-const StyledNav = styled.nav``;
+import { Hamburger } from "./Hamburger";
+const StyledNav = styled.nav`
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
 
-const Logo = ({ siteTitle }) => {
-  <h1 style={{ margin: 0 }}>
-    <Link
-      to="/"
-      style={{
-        textDecoration: `none`,
-      }}
-    >
-      {siteTitle}
-    </Link>
-  </h1>;
-};
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
 
-export const Navbar = ({ siteTitle }) => (
+const StyledH1 = styled.h1`
+  margin: 1rem 2rem;
+  textdecoration: none;
+`;
+
+const Logo = ({ siteTitle }) => (
+  <StyledH1>
+    <Link to="/">{siteTitle}</Link>
+  </StyledH1>
+);
+
+export const Navbar = ({ siteTitle, menuOpen, setMenuOpen }) => (
   <StyledNav>
     <Logo siteTitle={siteTitle} />
-    <Hamburger />
+    <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
   </StyledNav>
 );
 
