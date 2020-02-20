@@ -8,4 +8,4 @@ Lequel n'est pas push sur github, mais spécifique à votre environnement de dev
 
 ### Optimisation
 
-Hamburger > transformer le Div contenant les span animés en button pour l'accessibilité
+Hamburger > transformer le Div contenant les span animés en button pour l'accessibilité > régler le cursor:pointer qui s'active que sur les span
