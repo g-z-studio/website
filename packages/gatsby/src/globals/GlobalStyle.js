@@ -2,13 +2,12 @@ import React from "react"
 import { createGlobalStyle } from "styled-components"
 
 import { theme } from "./theme"
-
 export const GlobalStyle = createGlobalStyle`
 
   @font-face {
-    font-family: Tiempos;
-    src: url("../fonts/lacrimamg-senzaregular-webfont.woff2");
+    font-family: "Tiempos";
     font-weight: 300;
+    src: url("../static/fonts/TiemposTextWeb-Regular.woff") format('woff');
   }
   @font-face {
     font-family: "Tiempos Semibold";
