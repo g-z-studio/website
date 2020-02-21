@@ -46,16 +46,13 @@ const StyledNav = styled.nav`
 `;
 
 export const MenuPanel = ({ menuOpen }) => {
-  const [isOpen, setIsOpen] = useState(true);
-
-  if (isOpen) {
-    return (
-      <StyledNav menuOpen={menuOpen}>
-        <Link to="/infos">Infos</Link>
-        <Link to="/projects/">Projects</Link>
-        <Link to="/services/">Services</Link>
-      </StyledNav>
-    );
-  }
-  return null;
+  return (
+    <StyledNav menuOpen={menuOpen}>
+      <Link to="/">Home</Link>
+      <Link to="/infos">Infos</Link>
+      <Link to="/projects/">Projects</Link>
+      <Link to="/services/">Services</Link>
+      <Link to="/contact">Contact</Link>
+    </StyledNav>
+  );
 };
