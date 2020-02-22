@@ -4,7 +4,6 @@ import { Layout } from "../components/Layout";
 import { Wrapper } from "../components/Wrapper";
 import { HomeCard } from "../components/HomeCard";
 import { ProjectsPreview } from "../components/ProjectsPreview";
-import { TeamCard } from "../components/TeamCard";
 
 const IndexPage = () => (
   <Layout>
@@ -42,23 +41,6 @@ const IndexPage = () => (
       link="espace"
     />
     <ProjectsPreview />
-    <Wrapper marginHeight="100">
-      <p>
-        Philosophie général / Texte fondateur GZ studio propose des services
-        comme sa t oklm on te fai sa bien. En fait nous l’image c vraiment notre
-        truc et si tu veux tu nous appelle et c parti en 2-2 boum boum. Ensuite
-        c vrai que on aime bien les objets aussi c top c top frer wallah c top.
-        En dernier lieu si je puis me permettre il serait judicieux de cliquer
-        ici cliquez bande de salope cliquez Philosophie général / Texte
-        fondateur GZ studio propose des services comme sa t oklm on te fai sa
-        bien. En fait nous l’image c vraiment notre truc et si tu veux tu nous
-        appelle et c parti en 2-2 boum boum. Ensuite c vrai que on aime bien les
-        objets aussi c top c top frer wallah c top. En dernier lieu si je puis
-        me permettre il serait judicieux de cliquer ici cliquez bande de salope
-        cliquez
-      </p>
-    </Wrapper>
-    <TeamCard />
   </Layout>
 );
 

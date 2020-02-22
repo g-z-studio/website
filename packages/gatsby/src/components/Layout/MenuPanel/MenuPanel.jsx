@@ -63,11 +63,11 @@ export const MenuPanel = ({ menuOpen }) => {
       <MenuLink url={location.pathname} to="/infos">
         Infos
       </MenuLink>
-      <MenuLink url={location.pathname} to="/projects">
-        Projects
-      </MenuLink>
       <MenuLink url={location.pathname} to="/services">
         Services
+      </MenuLink>
+      <MenuLink url={location.pathname} to="/projects">
+        Projects
       </MenuLink>
       <MenuLink url={location.pathname} to="/contact">
         Contact
