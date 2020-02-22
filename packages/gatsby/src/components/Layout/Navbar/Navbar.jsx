@@ -9,7 +9,7 @@ const StyledNav = styled.nav`
   left: 0;
   top: 0;
   z-index: 9;
-  width: 100%;
+  width: 100vw;
 
   display: flex;
   flex-direction: row;
@@ -20,6 +20,7 @@ const StyledNav = styled.nav`
 const StyledH1 = styled.h1`
   margin: 1rem 2rem;
   textdecoration: none;
+  font-size: 2rem;
 `;
 
 const Logo = ({ siteTitle }) => (

@@ -1,7 +1,6 @@
-import React from "react"
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
-import { theme } from "./theme"
+import { theme } from "./theme";
 export const GlobalStyle = createGlobalStyle`
 
   @font-face {
@@ -20,26 +19,25 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Tiempos, Arial, Helvetica, sans-serif;
     color: ${theme.neutral5};
     font-size: ${theme.globals.fontSize};
-    height: 100%;
+    /* overflow-x: hidden; */
 
-    line-height: 1.15; /* Correct the line height in all browsers. */
+    line-height: 1.3; /* Correct the line height in all browsers. */
     -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */
   }
+
   body {
     margin: 0;
-    min-height: 100vh;    
-    
     background: ${theme.neutral1};
-
-    #__next {
-      min-height: 100vh;    
-      display: grid;
-      grid-template-rows: 1fr auto;
-    }
   }
+
 
   h1, h2, h3, h4, h5, p {
     margin: 0;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: 3rem;
+    overflow-wrap: break-word;
   }
 
   button,input :focus { outline: none; }
@@ -53,4 +51,4 @@ export const GlobalStyle = createGlobalStyle`
   .grecaptcha-badge{
     visibility: collapse !important;  
 }
-`
+`;

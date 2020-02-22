@@ -1,23 +1,41 @@
 import React from "react";
-import { Link } from "gatsby";
-
-// import Layout from "../components/layout";
-import Image from "../components/image";
 import SEO from "../components/seo";
 import { Layout } from "../components/Layout";
+import { Wrapper } from "../components/Wrapper";
+import { HomeCard } from "../components/HomeCard";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Coucou</h1>
-
-    <h2>Tu es chez la g.z. ici poto</h2>
-
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/projects/">Projets</Link>
-    <br />
+    <Wrapper height="100">
+      <h1>Des expériences sonores plus riches et signifiantes.</h1>
+      <h3>
+        En exploitant toutes les compétences de la création sonore appliquée,
+        nos designers, monteurs et ingénieurs travaillent ensemble, du concept à
+        la post-production. <br />
+        Que vos besoins se situent dans le champ de l'image ou de l'espace,
+        notre volonté est de vous accompagner pour réaliser au mieux la
+        dimension sonore de votre projet.
+      </h3>
+    </Wrapper>
+    <h2>Services</h2>
+    <HomeCard
+      paragraph="GZ studio propose des services
+      comme sa t oklm on te fai sa bien.
+      En fait nous l’image c vraiment notre
+      truc et si tu veux tu nous appelle et c
+      parti en 2-2 boum boum:"
+    />
+    <HomeCard
+      paragraph="ensuite c vrai que on aime bien les
+      objets aussi c top c top frer wallah
+      c top"
+    />
+    <HomeCard
+      paragraph="En dernier lieu si je puis me permettre
+      il serait judicieux de cliquer
+      ici cliquez bande de salope cliquez"
+    />
   </Layout>
 );
 

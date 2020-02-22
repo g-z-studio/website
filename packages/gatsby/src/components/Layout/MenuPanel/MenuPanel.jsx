@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "../../../globals";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 
 const StyledNav = styled.nav`
   display: flex;
@@ -10,31 +11,31 @@ const StyledNav = styled.nav`
   justify-content: center;
   background: ${theme.neutral5};
   color: ${theme.neutral1};
-  height: 100vh;
   text-align: left;
   padding: 2rem;
-  position: absolute;
+  box-sizing: border-box;
+  position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   transition: transform 0.3s ease-in-out;
   cursor: default;
+
   transform: ${({ menuOpen }) =>
     menuOpen ? "translateX(0%)" : "translateX(100%)"};
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
+    width: 40%;
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;
     transition: color 0.3s linear;
-
-    @media (max-width: ${({ theme }) => theme.mobile}) {
+      (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 1.5rem;
       text-align: center;
     }
@@ -45,14 +46,32 @@ const StyledNav = styled.nav`
   }
 `;
 
+const MenuLink = styled(Link)`
+  color: ${props => (props.url === props.to ? theme.neutral5 : theme.neutral1)};
+  background-color: ${props =>
+    props.url === props.to ? theme.neutral1 : theme.neutral5};
+`;
+
 export const MenuPanel = ({ menuOpen }) => {
+  const location = useLocation();
+
   return (
     <StyledNav menuOpen={menuOpen}>
-      <Link to="/">Home</Link>
-      <Link to="/infos">Infos</Link>
-      <Link to="/projects/">Projects</Link>
-      <Link to="/services/">Services</Link>
-      <Link to="/contact">Contact</Link>
+      <MenuLink url={location.pathname} to="/">
+        Home
+      </MenuLink>
+      <MenuLink url={location.pathname} to="/infos">
+        Infos
+      </MenuLink>
+      <MenuLink url={location.pathname} to="/projects">
+        Projects
+      </MenuLink>
+      <MenuLink url={location.pathname} to="/services">
+        Services
+      </MenuLink>
+      <MenuLink url={location.pathname} to="/contact">
+        Contact
+      </MenuLink>
     </StyledNav>
   );
 };

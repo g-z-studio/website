@@ -7,11 +7,12 @@ import { GlobalStyle } from "../../globals";
 import { Navbar } from "./Navbar";
 import { MenuPanel } from "./MenuPanel";
 import { useOnClickOutside } from "./hook";
+import { Footer } from "./Footer";
+import { Wrapper } from "../Wrapper";
 
-const Div = styled.div`
-  margin: 100px 0 auto auto;
-  max-width: 960;
-  padding: 0 1.0875rem 1.45rem;
+const OverflowWrapper = styled.div`
+  overflow: hidden;
+  position: relative;
 `;
 
 export const Layout = ({ children }) => {
@@ -29,7 +30,7 @@ export const Layout = ({ children }) => {
   `);
 
   return (
-    <>
+    <OverflowWrapper>
       <GlobalStyle />
       <div ref={node}>
         <Navbar
@@ -39,11 +40,11 @@ export const Layout = ({ children }) => {
         />
         <MenuPanel menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
-      <Div>
+      <Wrapper marginHeight="144" marginWidth="36" height="79">
         <main>{children}</main>
-        <footer>© {new Date().getFullYear()} g.z. studio</footer>
-      </Div>
-    </>
+      </Wrapper>
+      <Footer>© {new Date().getFullYear()} g.z. studio</Footer>
+    </OverflowWrapper>
   );
 };
 
