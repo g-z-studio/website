@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import PropTypes from "prop-types";
+OBBOAimport React, { useContext, useEffect, useState } from "react";
+imporBOt PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "../../globals";
 import { Link } from "gatsby";
@@ -8,22 +8,18 @@ import { Wrapper } from "../Wrapper";
 import { ProjectFilterContext } from "../ProjectStateManagement";
 
 export const ProjectViewer = ({ hashtag, src, alt, title, paragraph, url }) => {
-  const [viewed, setViewed] = useState(true);
+  const [viewed, setViewed] = useState(false);
   const { state } = useContext(ProjectFilterContext);
 
-  useEffect(() => {
-    for (let [key, value] of Object.entries(state)) {
-      if (key === hashtag) {
-        if (state.filter) {
-          value ? setViewed(true) : setViewed(false);
-        } else {
-          setViewed(true);
-        }
-      }
-    }
-  });
+  // useEffect(() => {
+  //   for (let [key, value] of Object.entries(state)) {
+  //     if (key === hashtag) {
+  //       value === viewed ? setViewed(!viewed) : setViewed(viewed);
+  //     }
+  //   }
+  // });
 
-  return viewed ? (
+  return viewed ? null : (
     <Wrapper marginHeight="40">
       <Link to={url}>
         <img src={src} alt={alt} />
@@ -32,9 +28,8 @@ export const ProjectViewer = ({ hashtag, src, alt, title, paragraph, url }) => {
         <h3>{title}</h3>
       </Link>
       <p>{paragraph}</p>
-      <h5>#{hashtag}</h5>
     </Wrapper>
-  ) : null;
+  );
 };
 
 ProjectViewer.propTypes = {
