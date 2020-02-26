@@ -26,14 +26,14 @@ const reducer = (state, action) => {
             usage: false,
             atelier: false,
             image: !state.image,
-            filter: filterActive,
+            filter: !state.image,
           }
         : {
             espace: false,
             usage: false,
             atelier: false,
             image: !state.image,
-            filter: filterActive,
+            filter: !state.image,
           };
     case "espace":
       return state.espace
@@ -42,14 +42,14 @@ const reducer = (state, action) => {
             usage: false,
             atelier: false,
             espace: !state.espace,
-            filter: filterActive,
+            filter: !state.espace,
           }
         : {
             image: false,
             usage: false,
             atelier: false,
             espace: !state.espace,
-            filter: filterActive,
+            filter: !state.espace,
           };
     case "usage":
       return state.usage
@@ -58,14 +58,14 @@ const reducer = (state, action) => {
             espace: false,
             atelier: false,
             usage: !state.usage,
-            filter: filterActive,
+            filter: !state.usage,
           }
         : {
             image: false,
             espace: false,
             atelier: false,
             usage: !state.usage,
-            filter: filterActive,
+            filter: !state.usage,
           };
     case "atelier":
       return state.atelier
@@ -74,14 +74,14 @@ const reducer = (state, action) => {
             espace: false,
             usage: false,
             atelier: !state.atelier,
-            filter: filterActive,
+            filter: !state.atelier,
           }
         : {
             image: false,
             espace: false,
             usage: false,
             atelier: !state.atelier,
-            filter: filterActive,
+            filter: !state.atelier,
           };
     default:
       throw new Error();
@@ -97,52 +97,3 @@ export const ProjectStateManagement = ({ children }) => {
     </ProjectFilterContext.Provider>
   );
 };
-
-// const testReset = (rep, state, action) => {
-//   if (
-//     state.image &&
-//     state.espace &&
-//     state.usage &&
-//     state.atelier &&
-//     state.filter
-//   ) {
-//     return action => action({ type: "turnoff" });
-//   }
-//   return state;
-// };
-
-// const reducer = (state, action) => {
-//   switch (action.type) {
-//     case "turnoff":
-//       return { ...state, filter: false };
-//     case "image":
-//       let rep = state.image
-//         ? { ...state, image: !state.image, filter: true }
-//         : { ...state, image: !state.image, filter: true };
-//       return testReset(rep, state, action);
-//     case "espace":
-//       return state.espace
-//         ? { ...state, espace: false, filter: true }
-//         : { ...state, espace: true, filter: true };
-//     case "usage":
-//       return state.usage
-//         ? { ...state, usage: false, filter: true }
-//         : { ...state, usage: true, filter: true };
-//     case "atelier":
-//       return state.atelier
-//         ? { ...state, atelier: false, filter: true }
-//         : { ...state, atelier: true, filter: true };
-//     default:
-//       throw new Error();
-//   }
-// };
-
-// export const ProjectStateManagement = ({ children }) => {
-//   const [state, dispatch] = useReducer(reducer, initialState);
-
-//   return (
-//     <ProjectFilterContext.Provider value={{ state, dispatch }}>
-//       {children}
-//     </ProjectFilterContext.Provider>
-//   );
-// };

@@ -8,8 +8,8 @@ import { ProjectFilterContext } from "../../ProjectStateManagement";
 const StyledButton = styled.button`
   background: none;
   border: none;
-  color: ${(state, props) =>
-    state.filter && props.hashtag ? theme.neutral5 : theme.neutral3};
+  color: ${props =>
+    props.state.filter && props.hashtag ? theme.neutral5 : theme.neutral3};
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
