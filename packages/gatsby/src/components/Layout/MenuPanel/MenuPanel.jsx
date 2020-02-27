@@ -75,3 +75,7 @@ export const MenuPanel = ({ menuOpen }) => {
     </StyledNav>
   );
 };
+
+MenuPanel.propTypes = {
+  menuOpen: PropTypes.bool,
+};

@@ -75,3 +75,8 @@ export const Hamburger = ({ menuOpen, setMenuOpen }) => {
     </Div>
   );
 };
+
+Hamburger.propTypes = {
+  menuOpen: PropTypes.bool,
+  setMenuOpen: PropTypes.func,
+};

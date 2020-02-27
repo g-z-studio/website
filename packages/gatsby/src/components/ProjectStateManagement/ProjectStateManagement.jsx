@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer } from "react";
 
 export const ProjectFilterContext = React.createContext(null);
 
@@ -11,13 +11,6 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
-  let filterActive = !(
-    state.image ^
-    state.espace ^
-    state.usage ^
-    state.atelier
-  );
-
   switch (action.type) {
     case "image":
       return state.image

@@ -42,3 +42,17 @@ export const ProjectsPreview = () => (
     </GridDiv>
   </Wrapper>
 );
+
+Preview.defaultProps = {
+  to: "/",
+  src: "/",
+  alt: "image",
+  grid: "1",
+};
+
+Preview.propTypes = {
+  to: PropTypes.string,
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  grid: PropTypes.string,
+};

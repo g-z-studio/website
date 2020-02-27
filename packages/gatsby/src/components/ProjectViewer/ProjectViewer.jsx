@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { theme } from "../../globals";
+// import styled from "styled-components";
+// import { theme } from "../../globals";
 import { Link } from "gatsby";
 
 import { Wrapper } from "../Wrapper";
@@ -21,7 +21,7 @@ export const ProjectViewer = ({ hashtag, src, alt, title, paragraph, url }) => {
         }
       }
     }
-  });
+  }, [state, hashtag]);
 
   return viewed ? (
     <Wrapper marginHeight="40">

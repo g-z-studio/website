@@ -41,3 +41,17 @@ export const TeamCard = () => (
     </GridDiv>
   </Wrapper>
 );
+
+MemberPreview.defaultProps = {
+  to: "/",
+  src: "/",
+  alt: "image",
+  grid: "1",
+};
+
+MemberPreview.propTypes = {
+  to: PropTypes.string,
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  grid: PropTypes.string,
+};

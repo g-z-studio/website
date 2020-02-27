@@ -27,18 +27,21 @@ const IndexPage = () => (
       truc et si tu veux tu nous appelle et c
       parti en 2-2 boum boum:"
       link="image"
+      url="/services/image"
     />
     <HomeCard
       paragraph="ensuite c vrai que on aime bien les
       objets aussi c top c top frer wallah
       c top"
       link="usage"
+      url="/services/usage"
     />
     <HomeCard
       paragraph="En dernier lieu si je puis me permettre
       il serait judicieux de cliquer
       ici cliquez bande de salope cliquez"
       link="espace"
+      url="/services/espace"
     />
     <ProjectsPreview />
   </Layout>

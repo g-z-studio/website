@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
 
 import { Wrapper } from "../Wrapper";
 import { ProjectFilterContext } from "../ProjectStateManagement";
@@ -37,5 +36,3 @@ export const ProjectFilter = () => {
     </Wrapper>
   );
 };
-
-ProjectFilter.propTypes = {};

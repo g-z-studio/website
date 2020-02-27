@@ -3,7 +3,7 @@ import SEO from "../components/seo";
 import { Layout } from "../components/Layout";
 import { Wrapper } from "../components/Wrapper";
 
-import { FormContact } from "../components/FormContact";
+// import { FormContact } from "../components/FormContact";
 
 const ContactPage = () => (
   <Layout>
