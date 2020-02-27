@@ -12,6 +12,12 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `fonts`,
+          path: `${__dirname}/src/fonts`,
+        },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -33,8 +39,15 @@ module.exports = {
         // Add any options here
       },
     },
+    {
+      resolve: `gatsby-plugin-routes`,
+      options: {
+        // this is the path to your routes configuration file
+        path: `${__dirname}/src/routes.js`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
