@@ -64,11 +64,8 @@ const Span3 = styled(Span)`
 `;
 
 export const Hamburger = ({ menuOpen, setMenuOpen }) => {
-  // gère l'événement du DOM Réel et transmet à l'état du composant
-  const handleClick = () => setMenuOpen(!menuOpen);
-
   return (
-    <Div onClick={() => handleClick()}>
+    <Div onClick={() => setMenuOpen(!menuOpen)}>
       <Span1 menuOpen={menuOpen}></Span1>
       <Span2 menuOpen={menuOpen}></Span2>
       <Span3 menuOpen={menuOpen}></Span3>

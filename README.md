@@ -11,3 +11,5 @@ Lequel n'est pas push sur github, mais spécifique à votre environnement de dev
 Hamburger > transformer le Div contenant les span animés en button pour l'accessibilité > régler le cursor:pointer qui s'active que sur les span
 
 HomeCard / Layout > Régler le passage de prop sur Link
+
+ProjectViewer > refactor pour ne pas appeler le hook setViewed dans une loop
