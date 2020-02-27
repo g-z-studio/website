@@ -1,19 +1,23 @@
 import { createGlobalStyle } from "styled-components";
 
 import { theme } from "./theme";
+
+import tiemposRegular from "../fonts/TiemposTextWeb-Regular.woff";
+import proximaNova from "../fonts/proxima-nova-regular.woff2";
+
 export const GlobalStyle = createGlobalStyle`
 
   @font-face {
-    font-family: "Tiempos";
+    font-family: Tiempos;
     font-weight: 300;
-    src: url("../static/fonts/TiemposTextWeb-Regular.woff") format('woff');
+    src: url(${tiemposRegular}) format('woff');
   }
+
   @font-face {
-    font-family: "Tiempos Semibold";
-    src: url("../fonts/TiemposTextWeb-Semibold.woff");
-    font-weight: 600;
-  }
-  
+    font-family: ProximaNova;
+    font-weight: 300;
+    src: url(${proximaNova}) format('woff2');
+  }  
 
   html {
     font-family: Tiempos, Arial, Helvetica, sans-serif;
