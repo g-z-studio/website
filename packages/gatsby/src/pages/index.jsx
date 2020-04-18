@@ -9,7 +9,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Wrapper height="100">
-      <h1>Des expériences sonores plus riches et signifiantes.</h1>
+      <h1>Des expériences sonores plus riches et signifiantes</h1>
       <h3>
         En exploitant toutes les compétences de la création sonore appliquée,
         nos designers, monteurs et ingénieurs travaillent ensemble, du concept à

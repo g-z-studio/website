@@ -1,0 +1,23 @@
+/* GT Haptik Web Medium */
+
+@font-face {
+    font-family: 'gt_haptik_medium';
+    src: url('gt-haptik-medium-web.eot');
+    src: url('gt-haptik-medium-web.eot?#iefix') format('embedded-opentype'),
+         url('gt-haptik-medium-web.woff') format('woff'),
+         url('gt-haptik-medium-web.ttf') format('truetype'),
+         url('gt-haptik-medium-web.svg#gt_haptik_medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt_haptik_medium_rotalic';
+    src: url('gt-haptik-medium-rotalic-web.eot');
+    src: url('gt-haptik-medium-rotalic-web.eot?#iefix') format('embedded-opentype'),
+         url('gt-haptik-medium-rotalic-web.woff') format('woff'),
+         url('gt-haptik-medium-rotalic-web.ttf') format('truetype'),
+         url('gt-haptik-medium-rotalic-web.svg#gt_haptik_medium_rotalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

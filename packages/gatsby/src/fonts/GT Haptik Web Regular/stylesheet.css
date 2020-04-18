@@ -1,0 +1,23 @@
+/* GT Haptik Web Regular */
+
+@font-face {
+    font-family: 'gt_haptik_regular';
+    src: url('gt-haptik-web.eot');
+    src: url('gt-haptik-web.eot?#iefix') format('embedded-opentype'),
+         url('gt-haptik-web.woff') format('woff'),
+         url('gt-haptik-web.ttf') format('truetype'),
+         url('gt-haptik-web.svg#gt_haptik_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt_haptik_regular_rotalic';
+    src: url('gt-haptik-rotalic-web.eot');
+    src: url('gt-haptik-rotalic-web.eot?#iefix') format('embedded-opentype'),
+         url('gt-haptik-rotalic-web.woff') format('woff'),
+         url('gt-haptik-rotalic-web.ttf') format('truetype'),
+         url('gt-haptik-rotalic-web.svg#gt_haptik_regular_rotalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

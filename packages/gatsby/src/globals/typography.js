@@ -1,12 +1,21 @@
 export const typography = {
   globals: {
-    fontSize: "16px",
-    fontFamilySans: "MaisonNeue",
+    mobile: {
+      fontSize: "16px",
+      lineHeight: "1.5",
+    },
+    desktop: {
+      fontSize: "24px",
+      lineHeight: "1.5",
+    },
+
+    fontFamilySans: "ProximaNova",
     fontFamilySerif: "Tiempos",
   },
   heading1: {
-    fontSize: "3.3125rem",
+    fontSize: "3rem",
     fontWeight: 600,
+    lineHeight: "1.25",
   },
   heading2: {
     fontSize: "2.25rem",
