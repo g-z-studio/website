@@ -1,27 +1,43 @@
 import React from "react";
+import styled from "styled-components";
+
+import { theme } from "../globals";
+
 import SEO from "../components/seo";
 import { Layout } from "../components/Layout";
 import { Wrapper } from "../components/Wrapper";
-import { HomeCard } from "../components/HomeCard";
+// import { HomeCard } from "../components/HomeCard";
 import { ProjectsPreview } from "../components/ProjectsPreview";
+
+const HeroP = styled.p`
+  border-left: 0.4rem solid ${theme.neutral5};
+  padding: 0 1rem;
+`;
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Wrapper height="100">
-      <h1>Des expériences sonores plus riches et signifiantes</h1>
-      <h3>
+    <Wrapper height="90">
+      <h1>Des expériences sonores signifiantes</h1>
+      <HeroP>
         En exploitant toutes les compétences de la création sonore appliquée,
         nos designers, monteurs et ingénieurs travaillent ensemble, du concept à
         la post-production. <br />
         Que vos besoins se situent dans le champ de l'image ou de l'espace,
         notre volonté est de vous accompagner pour réaliser au mieux la
         dimension sonore de votre projet.
-      </h3>
+      </HeroP>
     </Wrapper>
-    <h2>Services</h2>
-    <HomeCard
-      paragraph="GZ studio propose des services
+    <Wrapper height="90">
+      <h2>Services</h2>
+      <h3>image</h3>
+      <h3>espace</h3>
+      <h3>interactif</h3>
+      <h3>atelier</h3>
+      <p></p>
+    </Wrapper>
+    {/* <HomeCard
+      paragraph="gz studio propose des services
       comme sa t oklm on te fai sa bien.
       En fait nous l’image c vraiment notre
       truc et si tu veux tu nous appelle et c
@@ -42,8 +58,10 @@ const IndexPage = () => (
       ici cliquez bande de salope cliquez"
       link="espace"
       url="/services/espace"
-    />
-    <ProjectsPreview />
+    /> */}
+    <Wrapper height="9  0">
+      <ProjectsPreview />
+    </Wrapper>
   </Layout>
 );
 

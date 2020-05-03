@@ -9,6 +9,7 @@ import { MenuPanel } from "./MenuPanel";
 import { useOnClickOutside } from "./hook";
 import { Footer } from "./Footer";
 import { Wrapper } from "../Wrapper";
+import { ContactFooter } from "./ContactFooter";
 
 const OverflowWrapper = styled.div`
   overflow: hidden;
@@ -42,6 +43,7 @@ export const Layout = ({ children }) => {
       </div>
       <Wrapper marginHeight="144" marginWidth="36" height="79">
         <main>{children}</main>
+        <ContactFooter />
       </Wrapper>
       <Footer>© {new Date().getFullYear()} g.z. studio</Footer>
     </OverflowWrapper>

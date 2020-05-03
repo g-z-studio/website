@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { Hamburger } from "./Hamburger";
 const StyledNav = styled.nav`
   position: fixed;
-  left: 0;
+  left: -0.5rem;
   top: 0;
   z-index: 9;
   width: 100vw;
@@ -18,9 +18,12 @@ const StyledNav = styled.nav`
 `;
 
 const StyledH1 = styled.h1`
-  margin: 1rem 2rem;
+  font-family: BCFalsterGrotesk, sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+
+  margin: 1rem 3rem 0 0;
   textdecoration: none;
-  font-size: 2rem;
 `;
 
 const Logo = ({ siteTitle }) => (

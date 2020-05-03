@@ -2,7 +2,11 @@ import { createGlobalStyle } from "styled-components";
 
 import { theme } from "./theme";
 
-import bcFalsterGroteskRegular from "../fonts/BCFalsterGrotesk/BCFalsterGrotesk-Regular.otf";
+import akkuratStdRegular from "../fonts/Akkurat/AkkuratStd-Regular.ttf";
+import akkuratStdBold from "../fonts/Akkurat/AkkuratStd-Bold.ttf";
+
+import halvarBold from "../fonts/Halvar Breitschrift/HalvarBreitschriftBold.ttf";
+
 import gtHaptikMedium from "../fonts/GT Haptik Web Medium/gt-haptik-medium-web.woff";
 import gtHaptikMediumRotalic from "../fonts/GT Haptik Web Medium/gt-haptik-medium-rotalic-web.woff";
 import gtHaptikRegular from "../fonts/GT Haptik Web Regular/gt-haptik-web.woff";
@@ -20,6 +24,26 @@ import bcFalsterGroteskBoldItalic from "../fonts/BCFalsterGrotesk/BCFalsterGrote
 export const GlobalStyle = createGlobalStyle`
 
 @font-face {
+  @font-face {
+    font-family: AkkuratStd;
+    src: url(${akkuratStdRegular}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: AkkuratStd;
+    src: url(${akkuratStdBold}) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: Halvar;
+    src: url(${halvarBold}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
   font-family: GTHaptik;
   src: url(${gtHaptikMedium}) format('woff');
   font-weight: bold;
@@ -95,7 +119,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   html {
-    font-family: BCFalsterGrotesk, GTHaptik, Arial, Helvetica, sans-serif;
+    font-family: AkkuratStd, Arial, Helvetica, sans-serif;
     color: ${theme.neutral5};
     font-size: ${theme.globals.mobile.fontSize};
     /* overflow-x: hidden; */
@@ -113,6 +137,10 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, p {
     margin: 0;
     margin-bottom: 2rem;
+  }
+
+  h1, h2 {
+    font-family: Halvar, Arial, Helvetica, sans-serif;
   }
   h1 {
     font-size: ${theme.heading1.fontSize};

@@ -13,7 +13,7 @@ export const typography = {
     fontFamilySerif: "Tiempos",
   },
   heading1: {
-    fontSize: "3rem",
+    fontSize: "2.5rem",
     fontWeight: 600,
     lineHeight: "1.25",
   },
