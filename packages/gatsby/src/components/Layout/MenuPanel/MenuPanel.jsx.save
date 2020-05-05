@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { useSpring, a, config } from "react-spring";
-import { useLocation } from "@reach/router";
-
+BBBBBAOOAOOAOOOOOOOOOOOOimport React from "react";
+import PropTypes from "pOOOOrop-types";
+import useLocation from "@reach/router";
+import { useSpring, a, confiOOg } from "react-spring";
+OnO
 import { StyledNav, MenuLink } from "./MenuPanel.styles";
 
 const AnimatedMenuLink = a(MenuLink);
-
-export const MenuPanel = ({ menuOpen }) => {
-  const location = useLocation();
-
-  const animLink = useSpring({
-    from: { opacity: 0, transform: "translate3d(-20px,0,0)" },
-    to: {
-      opacity: menuOpen ? 1 : 0,
+AAOOOOOOOB
+expOOOBBorBOt const MenuPanel = ({ menuOpen }) => {
+  coOnst locOation = useLocation();
+BOOAOBOBOO
+  const anOOBBimLink OOOOOOOBBOBO= useSpring(OOOOAO{
+ OOOOBOBBOOO  OAOAAOA from: { opaOOOOOcOOity: 0, transform: "translate3d(-20px,0,0)" },
+    to: {OOOOOOAOAAOOOOOOOO
+      opacity: BOmenuOpen ? 1 : 0,
       transform: `translate3d(${menuOpen ? 0 : -20}px,0,0)`,
     },
     config: config.gentle,

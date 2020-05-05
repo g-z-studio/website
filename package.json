@@ -4,8 +4,9 @@
   "description": "gzstudio website",
   "main": "index.js",
   "scripts": {
-    "start": "yarn workspace @gz-studio/gatsby develop",
-    "dev": "yarn workspace @gz-studio/gatsby develop"
+    "start": "yarn workspace @gz-studio/gatsby gatsby:develop",
+    "dev": "yarn workspace @gz-studio/gatsby gatsby:develop",
+    "clean": "rm -rf node_modules && rm -rf packages/*/node_modules"
   },
   "repository": {
     "type": "git",
