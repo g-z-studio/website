@@ -1,19 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Wrapper } from "../Wrapper";
+import { Box } from "../Box";
 
 import { theme } from "../../globals";
 
 const StyledFooter = styled.footer`
-  grid-row: 3;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  align-content: center;
 
-  margin-top: ${theme.spacing.M}px;
-  height: 15vh;
   background: ${theme.neutral4};
   color: ${theme.neutral1};
   > * {
@@ -21,8 +19,10 @@ const StyledFooter = styled.footer`
   }
 `;
 
-export const Footer = () => (
-  <StyledFooter>
-    <Wrapper marginHeight="40">© {new Date().getFullYear()} g.z. studio</Wrapper>
+export const Footer = ({ children, ...props }) => (
+  <StyledFooter {...props}>
+    <Box horizontal="M" vertical="L">
+      {children}© {new Date().getFullYear()} g.z. studio
+    </Box>
   </StyledFooter>
 );
