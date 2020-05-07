@@ -1,3 +1,3 @@
-export { fontFace } from "./fontFace";
-export { main } from "./main";
+export { fontFace } from "./globalStyleHelpers";
+export { main } from "./globalStyleHelpers";
 export { theme } from "./theme";
