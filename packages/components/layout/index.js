@@ -1,7 +1,6 @@
 export { Box } from "./Box";
-export { Stack } from "./Stack";
-export { Inlet } from "./Inlet";
-export { Wrapper } from "./Wrapper";
+export { Stack } from "./Stack.old";
+export { Inlet } from "./Inlet.old";
 export { Grid } from "./Grid";
-export { Navbar } from "./Navbar";
 export { Footer } from "./Footer";
+export { Header } from "./Header";
