@@ -5,8 +5,8 @@ const Div = styled.div`
   justify-self: center;
   align-self: center;
 `;
-export const SocialBar = () => (
-  <Div>
-    <span>{"{  facebook / instagram / linkedin / mail  }"}</span>
+export const SocialBar = ({ cssToChild }) => (
+  <Div css={cssToChild}>
+    <span>{"{   facebook / instagram / linkedin / mail   }"}</span>
   </Div>
 );
