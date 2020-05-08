@@ -3,15 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf node_modules"
+  },
   "peerDependencies": {
     "react": "*",
     "react-dom": "*",
-    "styled-components": "*"
+    "styled-components": ">= 5.0.1",
+    "babel-plugin-styled-components": "^1.10.7"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-styled-components": "^1.10.7",
-    "styled-components": "*"
+    "babel-loader": "^8.1.0"
   }
 }

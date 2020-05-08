@@ -22,6 +22,15 @@
     "strapi-plugin-users-permissions": "3.0.0-beta.18.7",
     "strapi-utils": "3.0.0-beta.18.7"
   },
+  "nohoist": [
+    "**",
+    "styled-components",
+    "styled-components/**",
+    "strapi-admin",
+    "strapi-admin/**",
+    "strapi-plugin-content-manager",
+    "strapi-plugin-content-manager/**"
+  ],
   "author": {
     "name": "A Strapi developer"
   },

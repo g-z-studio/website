@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn workspace @gz-studio/gatsby gatsby:develop",
     "dev": "yarn workspace @gz-studio/gatsby gatsby:develop",
-    "clean": "rm -rf node_modules && rm -rf packages/*/node_modules"
+    "clean": "rm -rf node_modules && rm -rf packages/**/node_modules"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,12 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "nohoist": [
+    "**/styled-components",
+    "**/styled-components/**"
+  ],
+  "dependencies": {
+    "styled-components": "^5.1.0"
+  }
 }
