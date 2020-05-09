@@ -1,15 +1,29 @@
 import React from "react";
+// import { css } from "styled-components";
 import { Box, Grid } from "@gz-studio/components";
+import { PortfolioElement } from "./PortfolioElement";
+import { CatFilter } from "../../components";
+
+import { fakeData } from "./fakeData";
 
 export const Portfolio = ({ id }) => (
   <Box horizontal="M">
     <section id={id}>
-      <Grid rows="1fr">
-        <h3>image</h3>
-        <h3>espace</h3>
-        <h3>interactif</h3>
-        <h3>atelier</h3>
-        <p></p>
+      <CatFilter />
+      <Grid rows="1fr" gap="M">
+        <PortfolioElement
+          title="Title"
+          cats={["Catégorie"]}
+          tags={["tags", "tags", "tags"]}
+        />
+        {fakeData.map((data, index) => (
+          <PortfolioElement
+            key={index}
+            title={data.title}
+            cats={data.cats}
+            tags={data.tags}
+          />
+        ))}
       </Grid>
     </section>
   </Box>
