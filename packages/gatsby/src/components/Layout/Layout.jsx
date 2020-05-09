@@ -1,9 +1,13 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import { ThemeProvider } from "styled-components";
 
-import { Grid, CustomGlobalStyle, Navbar, Footer } from "@gz-studio/components";
+import {
+  Grid,
+  CustomThemeProvider,
+  CustomGlobalStyle,
+  Footer,
+} from "@gz-studio/components";
 import { fontFace, main, theme } from "../../globals";
 import { SocialBar } from "../SocialBar";
 import { Navigator } from "./Navigator";
@@ -18,6 +22,11 @@ export const Layout = ({ children }) => {
       }
     }
   `);
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]');
+  }
+
   const links = [
     { href: "#infos", title: "infos" },
     { href: "#projects", title: "projets" },
@@ -25,8 +34,7 @@ export const Layout = ({ children }) => {
   ];
 
   return (
-    <>
-      {/* <ThemeProvider theme={theme}> */}
+    <CustomThemeProvider theme={theme}>
       <CustomGlobalStyle main={main} fontFace={fontFace} />
       <Grid rows="10vh auto 10vh" gap="M">
         <Navigator
@@ -39,23 +47,8 @@ export const Layout = ({ children }) => {
           <SocialBar />
         </Footer>
       </Grid>
-      {/* </ThemeProvider> */}
-    </>
+    </CustomThemeProvider>
   );
-  // return (
-  //   <>
-  //     {/* <ThemeProvider theme={theme}> */}
-  //     <CustomGlobalStyle main={main} fontFace={fontFace} />
-  //     <Grid rows="10vh auto 20vh" gap="M">
-  //       <Navbar siteTitle={data.site.siteMetadata.title} css="grid-row: 1;" />
-  //       <main css="grid-row: 2;">{children}</main>
-  //       <Footer cssToChild="grid-row: 3;">
-  //         <SocialBar />
-  //       </Footer>
-  //     </Grid>
-  //     {/* </ThemeProvider> */}
-  //   </>
-  // );
 };
 
 Layout.propTypes = {
