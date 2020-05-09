@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../globals";
 
 export const Button = styled.button`
   text-align: center;
@@ -8,25 +7,25 @@ export const Button = styled.button`
   cursor: pointer;
 
   border: none;
-  border-radius: ${theme.borderRadius}rem;
+  border-radius: ${({ theme }) => theme.spacing.S};
 
-  padding: ${theme.spacing.S}rem ${theme.spacing.M}rem;
-  min-width: ${theme.spacing.XL}rem;
-  max-width: ${theme.spacing.L * 4}rem;
+  padding: ${({ theme }) => theme.spacing.S} ${({ theme }) => theme.spacing.M};
+  min-width: ${({ theme }) => theme.spacing.XL};
+  max-width: ${({ theme }) => theme.spacing.L * 4};
 
-  font-size: ${theme.utils.buttonFontSize};
-  font-weight: ${theme.utils.buttonFontWeight};
+  font-size: ${({ theme }) => theme.fontSize.caption};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
 
-  color: ${theme.neutral5};
-  background-color: ${theme.mint1};
-  border: ${theme.mint2} solid 1.5px;
+  color: ${({ theme }) => theme.secondaryColor.base};
+  background-color: ${({ theme }) => theme.primaryColor.base};
+  border: ${({ theme }) => theme.primaryColor.light} solid 1.5px;
 
-  transition: all ${theme.steady} cubic-bezier(0.6, 0, 0.4, 1);
+  transition: all ${({ theme }) => theme.steady} cubic-bezier(0.6, 0, 0.4, 1);
 
   :hover {
-    background-color: ${theme.mint3};
-    border: ${theme.mint3} solid 1.5px;
+    background-color: ${({ theme }) => theme.primaryColor.light};
   }
   :active {
+    background-color: ${({ theme }) => theme.primaryColor.lighter};
   }
 `;

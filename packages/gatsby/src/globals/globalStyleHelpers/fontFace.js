@@ -17,6 +17,13 @@ import bcFalsterGroteskMediumItalic from "../../static/fonts/BCFalsterGrotesk/BC
 import bcFalsterGroteskBold from "../../static/fonts/BCFalsterGrotesk/BCFalsterGrotesk-Bold.otf";
 import bcFalsterGroteskBoldItalic from "../../static/fonts/BCFalsterGrotesk/BCFalsterGrotesk-BoldItalic.otf";
 
+// Upgrade : Générer programatiquement une font-face de façon fonctionnelle ? ...
+// Permettrait de tirer la valeur de font-family depuis le thème
+// generateFontFace(fontFamily, src, formatOf(src))
+// RegExp/string processing sur le nom du fichier pour determiner font-weight et font-style ?...
+// + éventuellement script fs pour scanner static/fonts et renvoyer un array de src
+// >> generateFontFaceFamily(fontFamily, [src])
+
 export const fontFace = `
 @font-face {
   @font-face {

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import { Wrapper } from "../Wrapper";
-import { ProjectFilterContext } from "../ProjectStateManagement";
+import { ProjectFilterContext } from "../../components/CatFilterStateMgmt";
 import { FilterButton } from "./FilterButton";
 
 export const ProjectFilter = () => {

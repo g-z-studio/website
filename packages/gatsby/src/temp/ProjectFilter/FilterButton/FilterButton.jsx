@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "../../../globals";
 
-import { ProjectFilterContext } from "../../ProjectStateManagement";
+import { ProjectFilterContext } from "../../../components/CatFilterStateMgmt";
 
 const StyledButton = styled.button`
   background: none;

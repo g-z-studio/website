@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 import { Wrapper } from "../Wrapper";
-import { ProjectFilterContext } from "../ProjectStateManagement";
+import { CatFilterContext } from "../../components/CatFilterStateMgmt";
 
 export const ProjectViewer = ({ hashtag, src, alt, title, paragraph, url }) => {
   const [viewed, setViewed] = useState(true);
-  const { state } = useContext(ProjectFilterContext);
+  const { state } = useContext(CatFilterContext);
 
   useEffect(() => {
     for (let [key, value] of Object.entries(state)) {

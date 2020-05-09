@@ -11,6 +11,6 @@ export const spacingCases = (spacing) => {
     case "XL":
       return theme.spacing.XL;
     default:
-      return 0;
+      return spacing ? spacing : 0;
   }
 };

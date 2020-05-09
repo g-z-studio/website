@@ -11,7 +11,7 @@
 
 ```
  src
-  |_ components // composants custom & layout
+  |_ components // composants custom & layout *partagés* entre les différentes pages/scènes
   |_ globals // thème
   |_ pages // les pages routées par gatsby
   |_ scenes // les sous composants construisant chaque page
@@ -25,3 +25,4 @@ Le reste des composants primitives dans @gz-studio/components
 ## TODO
 
 - Bouger les assets images + fonts dans ./static
+- Bug animation Navigator > reset de l'anim si update du state rapide > solution ? cf https://www.react-spring.io/docs/hooks/use-spring

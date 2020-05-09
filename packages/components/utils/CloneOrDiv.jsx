@@ -7,15 +7,8 @@ const Div = styled.div`
 `;
 
 const BoxedChild = StyledClone`
-  ${(props) => props.cloneStyle}
+  ${(props) => props.cloneStyle} 
 `;
-
-// export const CloneOrDiv = ({ children, ...otherProps }) =>
-//   React.Children.count(children) === 1 && children.type !== React.Fragment ? (
-//     <BoxedChild {...otherProps} component={children} />
-//   ) : (
-//     <Div {...otherProps}>{children}</Div>
-//   );
 
 export const CloneOrDiv = ({ className, children, ...otherProps }) =>
   children.type !== "string" &&
