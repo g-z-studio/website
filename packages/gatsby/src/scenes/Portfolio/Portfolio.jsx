@@ -14,7 +14,7 @@ export const Portfolio = ({ id }) => (
         <Grid rows="1fr" gap="M">
           <PortfolioElement
             title="Title"
-            cats={["Catégorie"]}
+            cats={["catégorie", "usage"]}
             tags={["tags", "tags", "tags"]}
           />
           {fakeData.map((data, index) => (
