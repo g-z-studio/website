@@ -30,7 +30,7 @@ export const fakeData = [
   },
   {
     title: "Le Pont des Broignes",
-    cats: ["image"],
+    cats: ["image", "espace"],
     tags: ["prise de son"],
     description:
       "Et fugiat voluptatum enim et sint culpa dolore. Qui et dolorum sed. Harum sed non error velit nemo. Est corrupti et neque dolor cupiditate voluptatum. Harum deserunt sint necessitatibus necessitatibus reiciendis delectus. Atque minima non eligendi.",
