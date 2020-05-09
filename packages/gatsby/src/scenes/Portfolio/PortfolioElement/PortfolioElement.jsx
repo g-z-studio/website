@@ -19,7 +19,8 @@ export const PortfolioElement = ({ title, cats, tags }) => {
 
     const currentKey = value => stateKeys[stateValues.indexOf(value)];
     const isCatMatching = value => cats.find(cat => currentKey(value) === cat);
-    const filter = value => !(!value && state.filter);
+
+    const filter = value => !state.filter || value;
 
     const isCatStateTruthy = stateValues.find(
       value => value && isCatMatching(value)
