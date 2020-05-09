@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Box, Button } from "@gz-studio/components";
-import { theme } from "../../globals";
+import { theme } from "../../../globals";
 
 export const Contact = ({ id }) => (
   <Box bottom="M">

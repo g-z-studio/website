@@ -2,7 +2,7 @@ import React from "react";
 // import { css } from "styled-components";
 import { Box, Grid } from "@gz-studio/components";
 import { PortfolioElement } from "./PortfolioElement";
-import { CatFilter, CatFilterStateMgmt } from "../../components";
+import { CatFilter, CatFilterStateMgmt } from "../../../components";
 
 import { fakeData } from "./fakeData";
 

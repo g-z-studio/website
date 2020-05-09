@@ -2,8 +2,8 @@ import React from "react";
 import { Grid, Box } from "@gz-studio/components";
 import styled from "styled-components";
 
-import { theme } from "../../globals";
-import { SocialBar } from "../../components";
+import { theme } from "../../../globals";
+import { SocialBar } from "../../../components";
 
 const HeroP = styled.p`
   border-left: 0.4rem solid ${theme.neutral5};

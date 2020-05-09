@@ -1,6 +1,7 @@
 export const fakeData = [
   {
     title: "D-IVA",
+    slug: "d-iva",
     cats: ["image"],
     tags: ["montage", "mixage", "design", "composition"],
     description:
@@ -30,6 +31,7 @@ export const fakeData = [
   },
   {
     title: "Le Pont des Broignes",
+    slug: "le_point_des_broignes",
     cats: ["image", "espace"],
     tags: ["prise de son"],
     description:

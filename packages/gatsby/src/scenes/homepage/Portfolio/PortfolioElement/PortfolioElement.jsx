@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Box } from "@gz-studio/components";
-import { CatFilterContext } from "../../../components";
+import { CatFilterContext } from "../../../../components";
 import {
   GridTitle,
   CatLabel,
