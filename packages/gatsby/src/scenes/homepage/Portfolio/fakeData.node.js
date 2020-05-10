@@ -1,4 +1,4 @@
-export const fakeData = [
+const fakeData = [
   {
     title: "D-IVA",
     slug: "d-iva",
@@ -16,7 +16,7 @@ export const fakeData = [
       { title: "hackster.io", url: "https://www.hackster.io/" },
       { title: "designalive.com", url: "https://designalive.com/" },
     ],
-    award: ["Grammy Award For The Best Soundtrack"],
+    awards: ["Grammy Award For The Best Soundtrack"],
     credits: ["Tim Bum", "Victor O12"],
     sounds: [
       { title: "Sacha's Theme", src: "" },
@@ -49,7 +49,7 @@ export const fakeData = [
       { title: "hackster.io", url: "https://www.hackster.io/" },
       { title: "designalive.com", url: "https://designalive.com/" },
     ],
-    award: ["Grammy Award For The Best Soundtrack"],
+    awards: ["Grammy Award For The Best Soundtrack"],
     credits: ["Tim Bum", "Victor O12"],
     sounds: [
       { title: "Sacha's Theme", src: "" },
@@ -66,3 +66,5 @@ export const fakeData = [
     ],
   },
 ];
+
+module.exports = { fakeData };
