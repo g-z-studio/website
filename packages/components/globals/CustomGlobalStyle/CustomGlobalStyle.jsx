@@ -5,6 +5,9 @@ export const CustomGlobalStyle = createGlobalStyle`
   ${({ fontFace }) => fontFace}
 
   /* @@@@@@@@@@ Basic default styles reset
+  * {
+    box-sizing: border-box;
+  }
   html {
     position: relative;
     -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */
