@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -28,9 +28,9 @@ export const Layout = ({ children }) => {
   }
 
   const links = [
-    { href: "#infos", title: "infos" },
-    { href: "#projects", title: "projets" },
-    { href: "#contact", title: "contact" },
+    { href: "/#infos", title: "infos" },
+    { href: "/#projects", title: "projets" },
+    { href: "/#contact", title: "contact" },
   ];
 
   return (
