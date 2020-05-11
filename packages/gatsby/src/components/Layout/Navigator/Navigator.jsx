@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { a, useSpring } from "react-spring";
+import { useSpring } from "react-spring";
 import { Header, Box } from "@gz-studio/components";
 
 import { Nav } from "./Nav";
