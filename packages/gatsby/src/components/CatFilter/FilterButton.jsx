@@ -1,29 +1,32 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Button } from "@gz-studio/components";
+import { useInView } from "react-intersection-observer";
+
 import { CatFilterContext } from "../CatFilterStateMgmt";
 
-const StyledButton = styled(Button)`
-  background: none;
-  border: none;
-  color: ${props =>
-    props.state.filter && props.cat
-      ? props.theme.primaryColor.base
-      : props.theme.primaryColor.lighter};
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: ${({ theme }) => theme.fontSize.heading3};
-  cursor: pointer;
-`;
+export const FilterButton = ({ children, cat, rootRef, ...props }) => {
+  const { state, dispatch } = useContext(CatFilterContext);
+  const [ref, inView] = useInView({
+    root: rootRef.current,
+    rootMargin: "0% 0% 0% 0%",
+    threshold: 1,
+  });
 
-export const FilterButton = ({ children, cat, onClick }) => {
-  const { state } = useContext(CatFilterContext);
+  const handleClick = useCallback(cat => dispatch({ type: cat }), [dispatch]);
+
+  useEffect(() => {
+    inView && dispatch({ type: cat });
+  }, [inView, dispatch, cat]);
 
   return (
-    <StyledButton state={state} cat={cat} onClick={onClick}>
+    <StyledButton
+      state={state}
+      catState={state[cat]}
+      onClick={() => handleClick(cat)}
+      ref={ref}
+      {...props}
+    >
       {children}
     </StyledButton>
   );
@@ -34,3 +37,31 @@ FilterButton.propTypes = {
   onClick: PropTypes.func,
   grid: PropTypes.string,
 };
+
+const StyledButton = styled.button`
+  background: none;
+  border: none;
+  // text-align: center;
+  text-decoration: none;
+  max-width: none;
+  color: ${props =>
+    props.state.filter && props.catState
+      ? props.theme.primaryColor.base
+      : props.theme.primaryColor.lighter};
+
+  font-size: ${({ theme }) => theme.fontSize.heading2};
+  font-family: ${({ theme }) => theme.font.brand};
+  cursor: pointer;
+
+  scroll-snap-align: center;
+  transition: all 200ms cubic-bezier(0.215,0.61,0.355,1);
+
+  :active {
+    background: none;
+    outline; none;
+    color: ${props =>
+      props.state.filter && props.catState
+        ? props.theme.primaryColor.base
+        : props.theme.primaryColor.lighter};
+  }
+`;

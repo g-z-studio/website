@@ -1,85 +1,49 @@
 import React, { useReducer } from "react";
-
+import { switchCase } from "@gz-studio/components";
 export const CatFilterContext = React.createContext(null);
 
 const initialState = {
   filter: false,
-  image: false,
+  image: true,
   espace: false,
   usage: false,
   atelier: false,
 };
+const setCases = state => ({
+  image: {
+    image: !state.image,
+    espace: false,
+    usage: false,
+    atelier: false,
+    filter: !state.image,
+  },
+  espace: {
+    image: false,
+    espace: !state.espace,
+    usage: false,
+    atelier: false,
+    filter: !state.espace,
+  },
+  usage: {
+    image: false,
+    espace: false,
+    usage: !state.usage,
+    atelier: false,
+    filter: !state.usage,
+  },
+  atelier: {
+    image: false,
+    espace: false,
+    usage: false,
+    atelier: !state.atelier,
+    filter: !state.atelier,
+  },
+});
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "image":
-      return state.image
-        ? {
-            espace: false,
-            usage: false,
-            atelier: false,
-            image: !state.image,
-            filter: !state.image,
-          }
-        : {
-            espace: false,
-            usage: false,
-            atelier: false,
-            image: !state.image,
-            filter: !state.image,
-          };
-    case "espace":
-      return state.espace
-        ? {
-            image: false,
-            usage: false,
-            atelier: false,
-            espace: !state.espace,
-            filter: !state.espace,
-          }
-        : {
-            image: false,
-            usage: false,
-            atelier: false,
-            espace: !state.espace,
-            filter: !state.espace,
-          };
-    case "usage":
-      return state.usage
-        ? {
-            image: false,
-            espace: false,
-            atelier: false,
-            usage: !state.usage,
-            filter: !state.usage,
-          }
-        : {
-            image: false,
-            espace: false,
-            atelier: false,
-            usage: !state.usage,
-            filter: !state.usage,
-          };
-    case "atelier":
-      return state.atelier
-        ? {
-            image: false,
-            espace: false,
-            usage: false,
-            atelier: !state.atelier,
-            filter: !state.atelier,
-          }
-        : {
-            image: false,
-            espace: false,
-            usage: false,
-            atelier: !state.atelier,
-            filter: !state.atelier,
-          };
-    default:
-      throw new Error();
-  }
-};
+const reducer = (state, action) =>
+  switchCase(setCases(state))(() => {
+    throw new Error(`action.type: ${action.type} is not recognized`);
+  })(action.type);
 
 export const CatFilterStateMgmt = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
