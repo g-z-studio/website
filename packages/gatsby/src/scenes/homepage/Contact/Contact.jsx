@@ -1,16 +1,17 @@
 import React from "react";
-import { Grid, Box, Button } from "@gz-studio/components";
+import { Grid, Box } from "@gz-studio/components";
 import { theme } from "../../../globals";
+import { ContactForm } from "./ContactForm";
 
 export const Contact = ({ id }) => (
   <Box bottom="M">
     <section id={id}>
-      <Grid gap="M">
+      <Grid rows="40vh 1fr" gap="M">
         <Box
-          top="M"
           horizontal="M"
+          top="M"
           css={`
-            background: ${theme.neutral2};
+            background: ${theme.secondaryColor.darker};
           `}
         >
           <h1>Contactez nous</h1>
@@ -19,7 +20,9 @@ export const Contact = ({ id }) => (
             besoins et nous vous redigerons une proposition adaptée.
           </p>
         </Box>
-        <Button css="justify-self: center;">Contactez-nous</Button>
+        <Box horizontal="M">
+          <ContactForm />
+        </Box>
       </Grid>
     </section>
   </Box>
