@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { css } from "styled-components";
 import { CloneOrDiv } from "../utils";
 import { spacingCases } from "./spacingCases";
@@ -26,6 +27,11 @@ const boxStyleWithQuery = css`
   }
 `;
 
-export const Box = styled(CloneOrDiv)`
+const BoxStyle = styled(CloneOrDiv)`
   ${boxStyleWithQuery}
 `;
+export const Box = React.forwardRef((props, ref) => (
+  <BoxStyle {...props} ref={ref}>
+    {props.children}
+  </BoxStyle>
+));
