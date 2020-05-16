@@ -1,9 +1,7 @@
 const path = require("path");
 
 exports.createPages = async ({ actions: { createPage } }) => {
-  const projectTemplate = await path.resolve(
-    `src/templates/ProjectTemplate.jsx`
-  );
+  const projectTemplate = await path.resolve(`src/scenes/ProjectPage.jsx`);
   const fakeData = require("./src/scenes/homepage/Portfolio/fakeData.node");
 
   const pages = fakeData.fakeData;
