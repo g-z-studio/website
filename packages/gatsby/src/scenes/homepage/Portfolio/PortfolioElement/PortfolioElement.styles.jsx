@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { Box } from "@gz-studio/components";
 
 const labelHorizontalSpacing = "0.4rem";
-// const labelVerticalSpacing = "0.1rem";
+const labelVerticalSpacing = "0.2rem";
 
 export const GridTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.heading1};
@@ -34,6 +34,7 @@ export const TagLabel = styled(({ children, className }) => (
   align-content: center;
   justify-content: center;
   margin: 0;
+  margin-top: ${labelVerticalSpacing};
   margin-right: ${labelHorizontalSpacing};
 
   border: ${({ theme }) => theme.primaryColor.base} solid 1px;
