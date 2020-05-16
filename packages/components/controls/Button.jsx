@@ -11,7 +11,7 @@ export const Button = styled.button`
 
   padding: ${({ theme }) => theme.spacing.S} ${({ theme }) => theme.spacing.M};
   min-width: ${({ theme }) => theme.spacing.XL};
-  max-width: ${({ theme }) => theme.spacing.L * 4};
+  max-width: ${({ theme }) => theme.spacing.XXL};
 
   font-size: ${({ theme }) => theme.fontSize.caption};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
