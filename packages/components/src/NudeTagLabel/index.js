@@ -1,0 +1,1 @@
+export { NudeTagLabel } from "./NudeTagLabel";

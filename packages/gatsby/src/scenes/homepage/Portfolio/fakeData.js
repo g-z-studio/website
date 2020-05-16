@@ -35,6 +35,7 @@ export const fakeData = [
   {
     title: "Le Pont des Broignes",
     slug: "le_point_des_broignes",
+    livrables: ["enregistrement"],
     cats: ["image", "espace"],
     tags: ["prise de son"],
     description:

@@ -1,0 +1,1 @@
+export { NudeCatLabel } from "./NudeCatLabel";

@@ -5,7 +5,7 @@ import { Box } from "../../layout";
 const labelHorizontalSpacing = "0.4rem";
 const labelVerticalSpacing = "0.2rem";
 
-export const TagLabel = styled(({ children, className }) => (
+export const NudeTagLabel = styled(({ children, className }) => (
   <Box horizontal={labelHorizontalSpacing} className={className}>
     <span>{children}</span>
   </Box>
@@ -17,6 +17,6 @@ export const TagLabel = styled(({ children, className }) => (
   margin-top: ${labelVerticalSpacing};
   margin-right: ${labelHorizontalSpacing};
 
-  border: ${({ theme }) => theme.primaryColor.base} solid 1px;
+  border-left: ${({ theme }) => theme.primaryColor.base} solid 1px;
   font-size: ${({ theme }) => theme.fontSize.caption};
 `;

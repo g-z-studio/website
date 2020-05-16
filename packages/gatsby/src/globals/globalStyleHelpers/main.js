@@ -23,8 +23,11 @@ export const main = `
   h5,
   p {
     margin: 0;
+  }
+  p {
     margin-bottom: 2rem;
   }
+
 
   h1,
   h2 {

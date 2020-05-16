@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Box, Grid } from "@gz-studio/components";
-import { Layout } from "../components";
+
+import { Layout } from "../../components";
+import { ProjectPageHero } from "./ProjectPageHero";
+import { ProjectPageBody } from "./ProjectPageBody";
 
 const ProjectPage = ({ pageContext }) => {
   const {
@@ -22,48 +25,21 @@ const ProjectPage = ({ pageContext }) => {
   return (
     <Layout>
       <Grid rows="auto auto auto 10vh">
-        <Box horizontal="M" bottom="M">
-          <section>
-            <Grid rows="30vh 30vh 30vh">
-              <h1>{title}</h1>
-              <h3>{description}</h3>
-              <Box>
-                {sounds.map((sound, index) => (
-                  <div key={index}>{sound.title}</div>
-                ))}
-              </Box>
-            </Grid>
-          </section>
-        </Box>
-        <Box horizontal="M" bottom="M">
-          {cats.map((cat, index) => (
-            <p key={index}>{cat}</p>
-          ))}
-          {tags.map((tag, index) => (
-            <p key={index}>{tag}</p>
-          ))}
-          <p>{body} </p>
-          <p>Client {client}</p>
-          <p>Date {date}</p>
-          <p>
-            Press{" "}
-            {press.map((pres, index) => (
-              <span key={index}>{pres.title}</span>
-            ))}
-          </p>
-          <p>
-            Awards{" "}
-            {awards.map((award, index) => (
-              <span key={index}>{award}</span>
-            ))}
-          </p>
-          <p>
-            Crédits{" "}
-            {credits.map((credit, index) => (
-              <span key={index}>{credit}</span>
-            ))}
-          </p>
-        </Box>
+        <ProjectPageHero
+          title={title}
+          description={description}
+          sounds={sounds}
+        />
+        <ProjectPageBody
+          cats={cats}
+          tags={tags}
+          body={body}
+          client={client}
+          date={date}
+          press={press}
+          awards={awards}
+          credits={credits}
+        />
         <Box horizontal="M" bottom="M">
           {medias.map((media, index) => (
             <div key={index}>{media.title}</div>
@@ -73,6 +49,8 @@ const ProjectPage = ({ pageContext }) => {
     </Layout>
   );
 };
+
+ProjectPage.Hero = ProjectPageHero;
 
 export default ProjectPage;
 
