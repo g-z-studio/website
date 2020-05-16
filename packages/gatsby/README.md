@@ -24,5 +24,6 @@ Le reste des composants primitives dans @gz-studio/components
 
 ## TODO
 
-- Bouger les assets images + fonts dans ./static
+- --- Bouger les assets images + fonts dans ./static ---
 - Bug animation Navigator > reset de l'anim si update du state rapide > solution ? cf https://www.react-spring.io/docs/hooks/use-spring
+- placer la logique de Box dans un HOC plutot qu'un composant >> Pareil pour Grid ? spacingCase() pourra accéder au contexte du thème
