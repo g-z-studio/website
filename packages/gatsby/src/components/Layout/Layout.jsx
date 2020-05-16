@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-
 import {
   Grid,
   CustomThemeProvider,
@@ -11,6 +10,7 @@ import {
 import { fontFace, main, theme } from "../../globals";
 import { SocialBar } from "../SocialBar";
 import { Navigator } from "./Navigator";
+const SmoothScroll = require("smooth-scroll");
 
 export const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,10 +22,12 @@ export const Layout = ({ children }) => {
       }
     }
   `);
-  if (typeof window !== "undefined") {
-    // eslint-disable-next-line global-require
-    require("smooth-scroll")('a[href*="#"]');
-  }
+
+  (() => {
+    return new SmoothScroll('a[href*="#"]', {
+      offset: 150,
+    });
+  })();
 
   const links = [
     { href: "/#infos", title: "infos" },
